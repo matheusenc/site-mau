@@ -422,7 +422,7 @@ footer span{
     .contato-texto{
         padding: 15px;
         border-radius: 0;
-        width: 60vw;
+        width: 70vw;
         height: 150px;
         margin-top: 200px;
     }
@@ -472,6 +472,7 @@ footer span{
 }
 
 @media (max-width: 469px){
+    /*nav-bar*/
     .nav-bar{
         height: 8vh;
     }
@@ -518,11 +519,11 @@ footer span{
     .contato-img img{
         height: 150px;
     }
+
+    /*footer*/
+    footer span{
+        font-size: 12px;
+    }
 }
 
-@media (max-width: 373px){
-
-
-
-}
 
