@@ -84,7 +84,6 @@ li a {
     border-radius: 5px;
     background-color: var(--secondary-color);
     transition: 0.3s;
-    /* opacity: 0.7; */
 }
 
 .mobile-nav {
@@ -112,6 +111,7 @@ li a {
 .container-logo img{
     width: 100vw;
 }
+
 .container-logo h1{
     text-transform: uppercase;
     position: absolute;
@@ -128,10 +128,11 @@ li a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 50px;
 }
 
 .sobre-conteudo{
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -263,15 +264,36 @@ footer span{
     padding: 10px;
     background-color: var(--secondary-color);
     color: #fff;
-    font-family: 'Comfortaa', cursive;}
+    font-family: 'Comfortaa', cursive;
+}
 
 /*Mobile*/
+
+.nav-list.active {
+    transform: translateX(0);
+    display: flex;
+}
+
+
+.mobile-nav.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+
+}
+
+.mobile-nav.active .line2 {
+    opacity: 0;
+}
+
+.mobile-nav.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
 
 @media (max-width: 999px) {
     body {
         overflow-x: hidden;
     }
-
+    /*nav bar*/
     .nav-list {
         display: none;
         position: absolute;
@@ -300,12 +322,35 @@ footer span{
         display: block;
     }
 
+    /*Logo*/
+    h1{
+        font-size: 100px;
+    }
+
+    .container-logo h1{
+        font-size: 100px;
+    }
+
+    /*Projetos*/
+    .projeto-texto{
+        font-size: 14px;
+    }
+
+    /*Contato*/
+    .contato-img img{
+        height: 400px;
+    }
+
+    .contato-texto{
+        height: 180px;
+        width: 300px;
+    }
+
+    .contato-img img{
+        height: 350px;
+    }
 }
 
-.nav-list.active {
-    transform: translateX(0);
-    display: flex;
-}
 
 @keyframes navLinkFade {
     from {
@@ -320,25 +365,81 @@ footer span{
 
 }
 
-.mobile-nav.active .line1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
-
-}
-
-.mobile-nav.active .line2 {
-    opacity: 0;
-}
-
-.mobile-nav.active .line3 {
-    transform: rotate(45deg) translate(-5px, -7px);
-}
-
 @media (max-width: 599px) {
+    /*nav bar*/
     .nav-title{
         font-size: 28px;
     }
     .nav-subtitle{
         font-size: 19.2px;
+    }
+
+    /*Logo*/
+    h1{
+        font-size: 80px;
+    }
+
+    .container-logo h1{
+        font-size: 80px;
+    }
+
+    /*Sobre*/
+    .sobre-conteudo{
+        flex-direction: column-reverse;
+    }
+
+    h1{
+        padding-top:11vh;
+    }
+    
+    .sobre-img img{
+        padding: 15px;
+        width: 200px;
+    }
+
+    .sobre-texto{
+        width: 80vw;
+    }
+
+    /*Projeto*/
+    .projeto{
+        flex-direction: column;
+    }
+
+    .projeto-img img{
+        width: 100%;
+    }
+
+    .projeto-button button{
+        margin-bottom: 10px;
+    }
+
+    /*Contato*/
+    .contato{
+        flex-direction: column-reverse;
+    }
+
+    .contato-texto{
+        padding: 15px;
+        border-radius: 0;
+        width: 60vw;
+        height: 150px;
+        margin-top: 200px;
+    }
+
+    .contato-texto h3{
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+
+    .contato-img{
+        margin-bottom: 180px;
+        position: absolute;
+    }
+
+    .contato-img img{
+        height: 250px;
+        border-radius: 0;
     }
 }
 
@@ -356,9 +457,21 @@ footer span{
     .mobile-nav div{
         width: 28px;
     }
+
+    .contato-texto{
+        height: 130px;
+    }
+
+    .contato-img{
+        margin-bottom: 130px;
+    }
+
+    .contato-img img{
+        height: 200px;
+    }
 }
 
-@media (max-width: 470px){
+@media (max-width: 469px){
     .nav-bar{
         height: 8vh;
     }
@@ -366,14 +479,50 @@ footer span{
     .nav-list{
         top: 7.8vh;
     }
+
+    .nav-title{
+        font-size: 17px;
+    }
+    .nav-subtitle{
+        font-size: 12px;
+    } 
+
+    /*Logo*/
+    h1{
+        padding-top:8vh;
+        font-size: 60px;
+    }
+
+    .container-logo{
+        padding-top: 8vh;
+    }    
+    .container-logo h1{
+        font-size: 60px;
+    }
+
+    /*Contato*/
+    .contato-texto{
+        height: 110px;
+    }
+    .contato-texto h3{
+        font-size: 20px;
+    }
+    .contato-texto a{
+        font-size: 14px;
+    }
+
+    .contato-img{
+        margin-bottom: 65px;
+    }
+
+    .contato-img img{
+        height: 150px;
+    }
 }
 
 @media (max-width: 373px){
-    .nav-title{
-        font-size: 20.41px;
-    }
-    .nav-subtitle{
-        font-size: 14px;
-    } 
+
+
+
 }
 
