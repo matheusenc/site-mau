@@ -161,7 +161,7 @@ li a {
     box-shadow: 0 0 3px #8888, 0 0 5px #8888;
     display: flex;
     align-items: center;
-    width: 80vw;
+    width: 70vw;
     margin-bottom: 30px;
 }
 
@@ -179,13 +179,18 @@ li a {
     gap: 20px;
 }
 
+.projeto-texto h3, .projeto-texto p{
+    font-size: 1.2em;
+}
+
 .projeto-texto h3{
     font-weight: bold;
 }
 
 .projeto-button button{
     font-family: var(--font-family-titles-text);
-    width: 150px;
+    font-size: 1.1em;
+    width: 250px;
     background-color: var(--primary-color);
     border: none;
     padding: 8px;
@@ -236,7 +241,7 @@ li a {
   }
 
   .project-img img{
-    width: 85%;
+    width: 1500px;
   }
 
 /*Contato*/
@@ -315,6 +320,20 @@ footer span{
     transform: rotate(45deg) translate(-5px, -7px);
 }
 
+@media (max-width: 1499px){
+    .project-img img{
+        width: 1000px;
+      }
+
+    .projeto-texto h3, .projeto-texto p{
+        font-size: .8em;
+    }
+
+    .projeto-button button{
+        font-size: .7em;
+        width: 150px;
+    }
+}
 
 @media (max-width: 999px) {
     body {
@@ -370,6 +389,18 @@ footer span{
         margin-left: 0px;
     }
 
+    .projeto-texto h3, .projeto-texto p{
+        font-size: .7em;
+    }
+
+    .projeto-button button{
+        font-size: .6em;
+    }
+
+    .project-img img{
+        width: 700px;
+      }
+
     /*Contato*/
     .contato-img img{
         height: 400px;
@@ -397,6 +428,40 @@ footer span{
         transform: translateX(0);
     }
 
+}
+
+@media (max-width: 799px) {
+    .projeto{
+        flex-direction: column;
+    }
+
+    .projeto-img img{
+        width: 100%;
+    }
+
+    .projeto-button button{
+        margin-bottom: 10px;
+    }
+
+    .swiper-button-next:after, .swiper-button-prev:after{
+        font-size: 30px;
+    }
+
+    .project-img img{
+        width: 400px;
+      }
+
+    .projeto-texto h3, .projeto-texto p{
+        font-size: 1em;
+    }
+
+    .projeto-button button{
+        font-size: .8em;
+    }
+
+    .project-img img{
+        width: 500px;
+      }
 }
 
 @media (max-width: 599px) {
@@ -433,23 +498,6 @@ footer span{
 
     .sobre-texto{
         width: 80vw;
-    }
-
-    /*Projeto*/
-    .projeto{
-        flex-direction: column;
-    }
-
-    .projeto-img img{
-        width: 100%;
-    }
-
-    .projeto-button button{
-        margin-bottom: 10px;
-    }
-
-    .swiper-button-next:after, .swiper-button-prev:after{
-        font-size: 30px;
     }
 
     /*Contato*/
@@ -565,6 +613,17 @@ footer span{
     .swiper-button-next:after, .swiper-button-prev:after{
         font-size: 20px;
     }
+    .project-img img{
+        width: 300px;
+      }
+
+    .projeto-texto h3, .projeto-texto p{
+        font-size: .8em;
+    }
+
+    .projeto-button button{
+        font-size: .7em;
+    }
     /*footer*/
     footer span{
         font-size: 12px;
@@ -575,5 +634,9 @@ footer span{
     h1{
         font-size: 50px;
     }
+
+    .project-img img{
+        width: 270px;
+      }
 }
 
