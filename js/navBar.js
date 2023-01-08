@@ -1,4 +1,3 @@
-//nav-bar
 class MobileNavbar {
     constructor(mobileNav, navList, navLinks) {
         this.mobileNav = document.querySelector(mobileNav);

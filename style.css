@@ -212,6 +212,35 @@ li a {
     opacity: 80%;
 }
 
+.projeto-carousel{
+    display: none;
+}
+
+.swiper {
+    position: fixed;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .swiper-button-next{
+    margin-right: 20px;
+  }
+  .swiper-button-prev{
+    margin-left: 20px;
+  }
+
+  .project-img img{
+    width: 80%;
+  }
+
 /*Contato*/
 .contato{
     display: flex;
