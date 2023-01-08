@@ -230,15 +230,13 @@ li a {
     justify-content: center;
   }
 
-  .swiper-button-next{
+  .swiper-button-next, .swiper-button-prev{
     margin-right: 20px;
-  }
-  .swiper-button-prev{
-    margin-left: 20px;
+    color: var(--tertiary-color);
   }
 
   .project-img img{
-    width: 80%;
+    width: 85%;
   }
 
 /*Contato*/
@@ -365,6 +363,13 @@ footer span{
         font-size: 14px;
     }
 
+    .swiper-button-next{
+        margin-right: 0px;
+      }
+      .swiper-button-prev {
+        margin-left: 0px;
+    }
+
     /*Contato*/
     .contato-img img{
         height: 400px;
@@ -441,6 +446,10 @@ footer span{
 
     .projeto-button button{
         margin-bottom: 10px;
+    }
+
+    .swiper-button-next:after, .swiper-button-prev:after{
+        font-size: 30px;
     }
 
     /*Contato*/
@@ -549,10 +558,22 @@ footer span{
         height: 150px;
     }
 
+    /*projeto*/
+    .swiper-button-next, .swiper-button-prev{
+        width: 0;
+    }
+    .swiper-button-next:after, .swiper-button-prev:after{
+        font-size: 20px;
+    }
     /*footer*/
     footer span{
         font-size: 12px;
     }
 }
 
+@media (max-width: 329px){
+    h1{
+        font-size: 50px;
+    }
+}
 
