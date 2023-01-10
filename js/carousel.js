@@ -1,21 +1,32 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
 
 const allCarousel = document.querySelectorAll(".projeto-carousel");
-const imagesCarousel = document.querySelectorAll(".projeto-carousel img");
+
+const btnCloseCarousel = document.querySelector(".close-carousel-btn");
 
 function openCarousel(indexClick){
     allCarousel[indexClick].style.display = "flex";
+    btnCloseCarousel.style.display = "block";
     createSwipers();
     document.addEventListener("click", (event) => {
-        console.log("teste")
-        closeCarousel(event.target)
+        closeCarousel(event.target.parentNode.parentNode.parentNode)
     })
+    
+    document.onkeydown = function (event){
+        if(event.code === "Escape"){
+            closeCarousel(allCarousel[indexClick])
+        }
+    }
+    btnCloseCarousel.addEventListener("click", ()=>{
+        closeCarousel(allCarousel[indexClick])
+    });  
 }
 
 function closeCarousel(element){
-    imagesCarousel.forEach(image => {
-        if (element == image.parentNode.parentNode) {
-            element.parentNode.parentNode.parentNode.style.display = "none"
+    allCarousel.forEach((carousel) => {
+        if (element == carousel) {
+            btnCloseCarousel.style.display = "none";
+            element.style.display = "none"
         }
     })
 }

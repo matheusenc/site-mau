@@ -2,7 +2,7 @@
 
 :root{
     --primary-color: #B7B7A4;
-    --secondary-color: #545454;
+    --secondary-color: #3f3f3f;
     --tertiary-color: #F4F3EE;
     --font-color-titles: #B67068;
     --font-family-titles-text: 'Comfortaa', cursive;
@@ -20,7 +20,7 @@ a {
 
 h1{
     text-transform: uppercase;
-    font-size: 8em;
+    font-size: 8vw;
     font-family: var(--font-family-titles-text);
     color: var(--font-color-titles);
     padding: 11vh 0 40px 0;
@@ -54,13 +54,16 @@ h1{
     cursor: pointer;
 }
 
-.nav-subtitle {
+.nav-subtitle, .nav-title, li a,  .contato-texto, .contato-texto a, .container-logo h1{
     color: var(--tertiary-color);
 }
 
+.nav-subtitle{
+    font-size: 1vw;
+}
+
 .nav-title {
-    color: var(--tertiary-color);
-    font-size: 35px;
+    font-size: 2vw;
 }
 
 .nav-list {
@@ -74,10 +77,6 @@ h1{
     padding: 10px 16px 10px 16px;
     font-family: 'Comfortaa', cursive;
     transition: 0.1s;
-}
-
-li a {
-    color: white;
 }
 
 .nav-list li:hover {
@@ -115,9 +114,8 @@ li a {
 .container-logo h1{
     text-transform: uppercase;
     position: absolute;
-    font-size: 15em;
+    font-size: 8vw;
     font-family: var(--font-family-titles-text);
-    color: var(--tertiary-color);
     padding: 0;
 }
 
@@ -129,6 +127,7 @@ li a {
     flex-direction: column;
     align-items: center;
     padding-bottom: 50px;
+    height: 100vh;
 }
 
 .sobre-conteudo{
@@ -158,7 +157,6 @@ li a {
 }
 
 .projeto{
-    box-shadow: 0 0 3px #8888, 0 0 5px #8888;
     display: flex;
     align-items: center;
     width: 70vw;
@@ -170,6 +168,15 @@ li a {
     flex-direction: column;
     align-items: center;
     font-family: var(--font-family-titles-text);
+    background-color: var(--tertiary-color);
+}
+
+.projeto-info-e{
+    border-radius: 15px 0 0 15px;
+}
+
+.projeto-info-d{
+    border-radius: 0 15px 15px 0
 }
 
 .projeto-texto{
@@ -179,12 +186,25 @@ li a {
     gap: 20px;
 }
 
-.projeto-texto h3, .projeto-texto p{
-    font-size: 1.2em;
+.projeto-texto h3, .projeto-texto p, .sobre-texto p{
+    color: var(--secondary-color);
+    text-align: justify;
+} 
+
+.projeto-texto h3{
+    font-size: 1.5em;
+}
+
+.projeto-texto p{
+    font-size: 1em;
 }
 
 .projeto-texto h3{
     font-weight: bold;
+}
+
+.projeto-button{
+    padding: 20px;
 }
 
 .projeto-button button{
@@ -206,6 +226,7 @@ li a {
 }
 
 .projeto-img img{
+    box-shadow: 0 0 3px #8888, 0 0 5px #8888;
     display: flex;
     width: 40vw;
     cursor: pointer;
@@ -241,8 +262,21 @@ li a {
   }
 
   .project-img img{
-    width: 1500px;
+    width: 1200px;
   }
+
+.close-carousel-btn{
+    z-index: 2;
+    position: fixed;
+    background: none;
+    border: none;
+    right: 0;
+    color: var(--tertiary-color);
+    font-size: large;
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+}
 
 /*Contato*/
 .contato{
@@ -255,7 +289,6 @@ li a {
 .contato-texto{
     padding: 30px;
     background-color: var(--primary-color);
-    color: var(--tertiary-color);
     display: flex;
     flex-direction: column;
     border-radius: 10px 0 0 10px;
@@ -273,7 +306,6 @@ li a {
 }
 
 .contato-texto a{
-    color: var(--tertiary-color);
     text-decoration: none;
     text-transform: lowercase;
 }
@@ -343,7 +375,7 @@ footer span{
     .nav-list {
         display: none;
         position: absolute;
-        top: 10vh;
+        top: 9.9vh;
         right: 0;
         width: 100%;
         height: 29vh;
@@ -358,6 +390,14 @@ footer span{
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
     }
 
+    .nav-title{
+        font-size: 4vw;
+    }
+
+    .nav-subtitle{
+        font-size: 2vw;
+    }
+
     .nav-list li {
         margin-left: 0;
         border-bottom: var(--secondary-color) 1px solid;
@@ -370,11 +410,11 @@ footer span{
 
     /*Logo*/
     h1{
-        font-size: 100px;
+        font-size: 11vw;
     }
 
     .container-logo h1{
-        font-size: 100px;
+        font-size: 11vw;
     }
 
     /*Projetos*/
@@ -416,7 +456,6 @@ footer span{
     }
 }
 
-
 @keyframes navLinkFade {
     from {
         opacity: 0;
@@ -432,8 +471,19 @@ footer span{
 
 @media (max-width: 799px) {
     .projeto{
+        box-shadow: 0 0 3px #8888, 0 0 5px #8888;
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        width: 70vw;
+        margin-bottom: 30px;
+        background-color: var(--tertiary-color);
     }
+    
+    .projeto-d{
+        flex-direction: column-reverse;
+    }
+    
 
     .projeto-img img{
         width: 100%;
@@ -473,15 +523,6 @@ footer span{
         font-size: 19.2px;
     }
 
-    /*Logo*/
-    h1{
-        font-size: 80px;
-    }
-
-    .container-logo h1{
-        font-size: 80px;
-    }
-
     /*Sobre*/
     .sobre-conteudo{
         flex-direction: column-reverse;
@@ -511,6 +552,7 @@ footer span{
         width: 70vw;
         height: 150px;
         margin-top: 200px;
+        border-radius: 10px;
     }
 
     .contato-texto h3{
@@ -525,7 +567,6 @@ footer span{
 
     .contato-img img{
         height: 250px;
-        border-radius: 0;
     }
 }
 
@@ -577,15 +618,11 @@ footer span{
     /*Logo*/
     h1{
         padding-top:8vh;
-        font-size: 60px;
     }
 
     .container-logo{
         padding-top: 8vh;
     }    
-    .container-logo h1{
-        font-size: 60px;
-    }
 
     /*Contato*/
     .contato-texto{
@@ -631,10 +668,6 @@ footer span{
 }
 
 @media (max-width: 329px){
-    h1{
-        font-size: 50px;
-    }
-
     .project-img img{
         width: 270px;
       }
