@@ -127,7 +127,6 @@ h1{
     flex-direction: column;
     align-items: center;
     padding-bottom: 50px;
-    height: 100vh;
 }
 
 .sobre-conteudo{
@@ -140,7 +139,7 @@ h1{
 .sobre-texto{
     width: 40vw;
     font-family: var(--font-family-titles-text);
-    font-size: 1em;
+    font-size: 22px;
 }
 
 .sobre-img img{
@@ -371,6 +370,11 @@ footer span{
     body {
         overflow-x: hidden;
     }
+
+    .sobre-texto{
+        font-size: 18px;
+    }
+
     /*nav bar*/
     .nav-list {
         display: none;
@@ -622,7 +626,11 @@ footer span{
 
     .container-logo{
         padding-top: 8vh;
-    }    
+    }   
+    
+    .sobre-texto{
+        font-size: 14px;
+    }
 
     /*Contato*/
     .contato-texto{
