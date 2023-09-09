@@ -186,7 +186,12 @@ h1{
     gap: 20px;
 }
 
-.projeto-texto h3, .projeto-texto p, .sobre-texto p{
+.projeto-texto p, .sobre-texto p{
+    color: var(--secondary-color);
+    text-align: justify;
+} 
+
+.projeto-texto h3{
     color: var(--secondary-color);
     text-align: left;
 } 
