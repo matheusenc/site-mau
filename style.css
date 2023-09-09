@@ -109,13 +109,14 @@ h1{
 
 .container-logo img{
     width: 100vw;
+    opacity: 75%;
 }
 
 .container-logo h1{
     text-transform: uppercase;
     position: absolute;
     font-size: 8vw;
-    font-family: var(--font-family-titles-text);
+    font-family: var(--font-family-nav-bar);
     padding: 0;
 }
 
@@ -187,7 +188,7 @@ h1{
 
 .projeto-texto h3, .projeto-texto p, .sobre-texto p{
     color: var(--secondary-color);
-    text-align: justify;
+    text-align: left;
 } 
 
 .projeto-texto h3{
