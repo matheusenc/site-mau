@@ -107,17 +107,18 @@ h1{
     justify-content: center;
 }
 
-.container-logo img{
+.container-logo .background img{
     width: 100vw;
     opacity: 75%;
 }
 
-.container-logo h1{
-    text-transform: uppercase;
+.container-logo .logo{
     position: absolute;
-    font-size: 8vw;
-    font-family: var(--font-family-nav-bar);
-    padding: 0;
+    
+}
+
+.container-logo .logo img{
+    width: 50vw;
 }
 
 /*Sobre*/
